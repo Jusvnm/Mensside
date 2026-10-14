@@ -1,0 +1,27 @@
+/* Hueco de imagen pendiente (solo desarrollo o ?slots) */
+.slot {
+  display: grid; place-content: center; gap: 0.4rem; text-align: center; padding: 1rem; min-height: 8rem; width: 100%;
+  border: 1px dashed var(--ink-2); color: var(--ink-2); font-size: var(--step-small); word-break: break-all;
+  background: repeating-linear-gradient(135deg, transparent 0 10px, color-mix(in srgb, var(--ink) 5%, transparent) 10px 11px);
+}
+.slot__tag { letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--ink); }
+.slot code { font: 500 0.75rem/1.3 ui-monospace, Consolas, monospace; }
+
+/* Tijeras: indicador de carga de marca */
+.scissors {
+  position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 0.6rem; background: var(--bg-3); color: var(--ink); transition: opacity 0.4s;
+}
+.scissors.is-done { opacity: 0; pointer-events: none; }
+.scissors svg { overflow: visible; }
+.scissors path, .scissors circle { fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
+.scissors .sc-pin { fill: currentColor; stroke: none; }
+.scissors__label { font-size: var(--step-small); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); opacity: 0.8; }
+.sc-blade { transform-box: view-box; transform-origin: 32px 34px; }
+.sc-blade--a { animation: cut-a 1.1s ease-in-out infinite alternate; }
+.sc-blade--b { animation: cut-b 1.1s ease-in-out infinite alternate; }
+@keyframes cut-a { from { transform: rotate(10deg); } to { transform: rotate(-12deg); } }
+@keyframes cut-b { from { transform: rotate(-10deg); } to { transform: rotate(12deg); } }
+
+.scissors.is-error { background: var(--bg-3); }
+.scissors__error { display: grid; gap: 0.8rem; justify-items: center; text-align: center; padding: 1rem; }
+.scissors__error p { color: var(--ink-2); max-width: 28ch; }
