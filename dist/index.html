@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es" data-theme="night">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>MENSSIDE Hair Salon — Barbería en Cerro Colorado, Arequipa</title>
+  <meta name="description" content="MENSSIDE Hair Salon, barbería en Cerro Colorado, Arequipa. Tu rostro. Tu estilo. Tu mejor versión. Cortes, barba y cuidado facial." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MENSSIDE Hair Salon" />
+  <meta property="og:description" content="Tu rostro. Tu estilo. Tu mejor versión. Barbería en Cerro Colorado, Arequipa." />
+  <meta property="og:image" content="./og.jpg" />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <script>
+    /* Tema antes del primer pintado. Es un efecto visual: no refleja el horario del salón. */
+    (function () {
+      document.documentElement.classList.add('js');
+      var q = new URLSearchParams(location.search).get('theme');
+      var t = q === 'day' || q === 'night' ? q : null;
+      try { if (!t) t = localStorage.getItem('ms-theme'); } catch (e) {}
+      if (t !== 'day' && t !== 'night') { var h = new Date().getHours(); t = h >= 7 && h < 18 ? 'day' : 'night'; }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "MENSSIDE Hair Salon",
+    "description": "Barbería en Cerro Colorado, Arequipa.",
+    "address": { "@type": "PostalAddress", "streetAddress": "Calle Miguel Grau 110", "addressLocality": "Cerro Colorado", "addressRegion": "Arequipa", "addressCountry": "PE" },
+    "geo": { "@type": "GeoCoordinates", "latitude": -16.375972, "longitude": -71.559667 },
+    "openingHours": "Mo-Sa 10:00-20:00",
+    "sameAs": ["https://www.instagram.com/menssidesalon/", "https://www.facebook.com/menssidesalon/"]
+  }
+  </script>
+  <script type="module" crossorigin src="./assets/index-B3hGwYMc.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C_twN96x.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <a class="header__brand" href="#inicio" aria-label="MENSSIDE Hair Salon, ir al inicio">
+      <img data-logo alt="MENSSIDE Hair Salon" width="1108" height="198" />
+    </a>
+    <nav class="header__nav" id="nav" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#stylelab">Style Lab</a>
+      <a href="#barberos">Barberos</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+    <div class="header__tools">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar entre modo día y noche (efecto visual)" title="Modo día / noche (solo efecto visual)">
+        <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn" id="motion-toggle" type="button" aria-pressed="false" aria-label="Pausar animaciones" title="Pausar / reanudar animaciones">
+        <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5l11 7-11 7Z" fill="currentColor"/></svg>
+      </button>
+      <a class="btn btn--solid btn--sm" href="#reserva">Reservar</a>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <span class="menu-btn__bars" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- 1. HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true"><span class="hero__glow"></span><span class="grain"></span></div>
+      <figure class="hero__photo" id="hero-photo"></figure>
+      <div class="hero__copy">
+        <p class="eyebrow" data-reveal>Barbería · Cerro Colorado, Arequipa</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="line" data-reveal style="--i:1">Tu rostro.</span>
+          <span class="line" data-reveal style="--i:2">Tu estilo.</span>
+          <span class="line it" data-reveal style="--i:3">Tu mejor versión.<svg class="squiggle" viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M4 16 C 60 4, 110 22, 170 12 S 290 4, 396 14" pathLength="1" /></svg></span>
+        </h1>
+        <p class="hero__lead" data-reveal style="--i:4">Barbería y asesoramiento de estilo. Descubre el corte que va contigo y reserva tu cita.</p>
+        <div class="hero__actions" data-reveal style="--i:5">
+          <a class="btn btn--solid" href="#reserva">Reservar cita</a>
+          <a class="btn" href="#stylelab">Descubrir mi estilo <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="hero__meta" id="hero-meta" data-reveal style="--i:6"></p>
+      </div>
+      <img class="hero__mark" data-logo alt="" aria-hidden="true" />
+      <a class="badge" href="#reserva" aria-label="Reservar cita">
+        <svg class="badge__ring" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <defs><path id="badge-circle" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0" /></defs>
+          <text><textPath href="#badge-circle" textLength="472" lengthAdjust="spacing">BARBERÍA · CERRO COLORADO · AREQUIPA · MENSSIDE ·</textPath></text>
+        </svg>
+        <span class="badge__arrow" aria-hidden="true">↗</span>
+      </a>
+      <p class="hero__hint" aria-hidden="true"><span></span>Desliza para explorar</p>
+    </section>
+
+    <!-- BANDAS EN MOVIMIENTO -->
+    <div class="band" id="band" aria-hidden="true"></div>
+
+    <!-- LEMA QUE SE ILUMINA AL HACER SCROLL -->
+    <section class="statement" aria-label="Cómo reservar">
+      <p class="statement__text" data-scrub>Elige tu estilo. Elige a tu barbero. Llega con tu cita lista.</p>
+    </section>
+
+    <!-- 2. SERVICIOS -->
+    <section class="section services" id="servicios" aria-labelledby="serv-title">
+      <h2 class="display" id="serv-title" data-reveal>Cortes que<br /><span class="it">realzan tu estilo.</span></h2>
+      <div class="services__body">
+        <div class="services__aside" data-reveal>
+          <p>Cada servicio está pensado para resaltar lo mejor de ti. Elige uno o varios y arma tu cita; la fecha y la hora se eligen en Barbizo.</p>
+          <figure class="services__photo" id="services-photo"></figure>
+        </div>
+        <div class="services__table">
+          <p class="label" data-reveal>Servicios · precios en soles</p>
+          <ul class="svc-list" id="svc-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. STYLE LAB -->
+    <section class="section lab" id="stylelab" aria-labelledby="lab-title">
+      <div class="decor decor--scissors" aria-hidden="true"><div data-speed="-0.18"><svg viewBox="0 0 120 120" width="150" height="150" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="30" cy="92" r="14"/><circle cx="30" cy="28" r="14"/><path d="M40 82 108 20M40 38 108 100"/></g></svg></div></div>
+      <div class="lab__intro">
+        <p class="label" data-reveal>Style Lab · demostrativo</p>
+        <h2 class="display" id="lab-title" data-reveal>Tu estilo,<br /><span class="it">en cinco respuestas.</span></h2>
+        <p class="lab__note" data-reveal>Una guía orientativa a partir de opciones predefinidas. No analiza tu rostro ni usa inteligencia artificial; la decisión final la tomas con tu barbero.</p>
+      </div>
+      <div class="lab__panel" id="lab-panel" aria-live="polite"></div>
+    </section>
+
+    <!-- 4. BARBEROS -->
+    <section class="section barbers" id="barberos" aria-labelledby="barb-title">
+      <div class="decor decor--comb" aria-hidden="true"><div data-speed="0.22"><svg viewBox="0 0 160 60" width="220" height="82" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="148" height="18" rx="4"/><path d="M14 24v28M28 24v22M42 24v28M56 24v22M70 24v28M84 24v22M98 24v28M112 24v22M126 24v28M140 24v22"/></g></svg></div></div>
+      <h2 class="display" id="barb-title" data-reveal>Nuestros<br /><span class="it">barberos.</span></h2>
+      <ul class="barber-list" id="barber-list"></ul>
+    </section>
+
+    <!-- 5. RESULTADOS (solo con pares reales) -->
+    <section class="section results" id="resultados" aria-labelledby="res-title" hidden>
+      <div class="results__copy">
+        <p class="label" data-reveal>Antes y después</p>
+        <h2 class="display" id="res-title" data-reveal>El cambio habla<br /><span class="it">por sí solo.</span></h2>
+        <p class="results__hint" data-reveal>Arrastra la línea para comparar.</p>
+      </div>
+      <div class="results__stage" id="results-stage"></div>
+    </section>
+
+    <!-- 6. GALERÍA -->
+    <section class="section gallery" id="galeria" aria-labelledby="gal-title" hidden>
+      <h2 class="visually-hidden" id="gal-title">Galería</h2>
+      <div class="gallery__flow" id="gallery-flow"></div>
+    </section>
+
+    <!-- 7. RESEÑAS (solo verificadas) -->
+    <section class="section reviews" id="resenas" aria-labelledby="rev-title" hidden>
+      <h2 class="visually-hidden" id="rev-title">Experiencias de clientes</h2>
+      <div class="reviews__stage" id="reviews-stage"></div>
+    </section>
+
+    <!-- 8. RESERVA -->
+    <section class="section booking" id="reserva" aria-labelledby="book-title">
+      <div class="booking__bg" id="booking-bg" aria-hidden="true"></div>
+      <div class="booking__head">
+        <p class="label" data-reveal>Reserva</p>
+        <h2 class="display" id="book-title" data-reveal>Reserva<br /><span class="it">tu cita.</span></h2>
+        <p class="booking__lead" data-reveal>Elige tus servicios y tu barbero. Las citas se agendan y confirman en Barbizo, el sistema de reservas de MENSSIDE: allí ves los horarios reales.</p>
+      </div>
+      <div class="booking__grid">
+        <ol class="steps" id="steps" aria-label="Pasos de la reserva"></ol>
+        <aside class="ticket" id="ticket" aria-live="polite"></aside>
+      </div>
+    </section>
+
+    <!-- 9. UBICACIÓN -->
+    <section class="section location" id="ubicacion" aria-labelledby="loc-title">
+      <h2 class="visually-hidden" id="loc-title">Ubicación y contacto</h2>
+      <ul class="contact-rows" id="contact-rows"></ul>
+      <div class="map" id="map-block"></div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer__cols" id="footer-cols"></div>
+    <p class="footer__legal">© 2026 MENSSIDE. Todos los derechos reservados.</p>
+    <img class="footer__mark" data-logo alt="MENSSIDE Hair Salon" />
+  </footer>
+
+  <button class="float-cta" id="float-cta" type="button" hidden></button>
+  <button class="to-top" id="to-top" type="button" aria-label="Volver arriba"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle class="to-top__track" cx="24" cy="24" r="21"/><circle class="to-top__ring" cx="24" cy="24" r="21" pathLength="1"/></svg><span aria-hidden="true">↑</span></button>
+
+  <noscript><p style="padding:2rem;color:#ede9e2;background:#0a0a0b">MENSSIDE Hair Salon · Calle Miguel Grau 110, Cerro Colorado, Arequipa · Lunes a sábado 10:00–20:00 · Reservas: https://app.barbizo.com/login</p></noscript>
+</body>
+</html>
